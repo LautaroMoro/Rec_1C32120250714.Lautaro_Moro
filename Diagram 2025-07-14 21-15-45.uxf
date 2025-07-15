@@ -1,0 +1,67 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>500</x><y>400</y><w>400</w><h>200</h></coordinates><panel_attributes>/Vehiculo/
+--
+#patente: String
+#marca: String
+#añoFabricacion: int
+--
++Vehiculo(String patente, String marca, int anioFabricacion)
++getPatente():String
++getMarca(): String
++getAnioFabricacion(): int
++equals(Vehiculo otro): boolean
++toString():String
++puedeRecorrer(): abstract boolean
++compareTo(Nave o)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>190</x><y>780</y><w>300</w><h>170</h></coordinates><panel_attributes>Camion
+--
+-capacidadCarga: int
+--
++Camion(String patente, String marca,
+ int anioLanzamienrto, int capacidadCarga)
++getCapacidadCarga():int
++toString():String
++puedeRecorrer(): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>340</x><y>590</y><w>240</w><h>210</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>220;10;10;190</additional_attributes></element><element><id>Relation</id><coordinates><x>830</x><y>590</y><w>260</w><h>210</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;240;190</additional_attributes></element><element><id>UMLClass</id><coordinates><x>500</x><y>180</y><w>400</w><h>140</h></coordinates><panel_attributes>AgenciaTransporte
+--
+-vehiculos:ArrayList&lt;Vehiculo&gt;
+--
++AgenciaTransporte()
++agregarVehiculos(Vehiculo nuevo):void
++mostrarVehiculos():void
++iniciarRecorrido():void
++ordenarAlfabeticamente():void
++ordenarPorAnio():void
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>600</x><y>60</y><w>190</w><h>60</h></coordinates><panel_attributes>Main
+--
++main(String[] args): static void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>660</x><y>310</y><w>60</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-
+m1= 1...n
+m2= 1
+</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>120</x><y>290</y><w>310</w><h>60</h></coordinates><panel_attributes>ComparadorPorNombre&lt;Vehiculo&gt;
+--
++compareToIgnoreCase(Vehiculo v1, Vehiculo v2): int
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLInterface</id><coordinates><x>980</x><y>430</y><w>120</w><h>90</h></coordinates><panel_attributes>Comparable
+--
+compareTo(): int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLInterface</id><coordinates><x>190</x><y>440</y><w>140</w><h>90</h></coordinates><panel_attributes>Comparator
+--
+compare(o1, o2): int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>340</y><w>140</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;120;120</additional_attributes></element><element><id>Relation</id><coordinates><x>250</x><y>340</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>890</x><y>450</y><w>110</w><h>30</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>90;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>690</x><y>590</y><w>30</w><h>210</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;190</additional_attributes></element><element><id>Relation</id><coordinates><x>1200</x><y>850</y><w>120</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1300</x><y>820</y><w>110</w><h>90</h></coordinates><panel_attributes>TipoUso
+&lt;&lt;enum&gt;&gt;
+--
+MANTENIMIENTO,
+SUPERVISION,
+EMERGENCIA</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>680</x><y>110</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>560</x><y>780</y><w>300</w><h>170</h></coordinates><panel_attributes>Colectivo
+--
+-cantidadPasajeros: int
+--
++Colectivo(String patente, String marca,
+ int anioLanzamienrto, int cantidadPasajeros )
++getCantidadPasajeros():int
++toString():String
++puedeRecorrer(): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>910</x><y>780</y><w>300</w><h>170</h></coordinates><panel_attributes>AutoInspeccion
+--
+-tipoUso:TipoUso
+--
++AutoInspeccion(String patente, String marca,
+ int anioFabricacion, TipoUso tipoUso)
++getTipoUso():TipoUso
++toString():String
++puedeRecorrer(): boolean</panel_attributes><additional_attributes></additional_attributes></element></diagram>
